@@ -40,3 +40,11 @@ app.get('/users', async(req, res) => {
 app.listen (3000, ()=>{
 console. log('Server listening on port 3000');
 });
+
+// CODE SUMMARY FOR TEACHER:
+// This Express server handles user data fetching with HTMX integration
+// - Middleware configured for: static files (public folder), form data parsing, JSON parsing
+// - GET /users endpoint: accepts 'limit' query parameter (default 10), fetches from JSONPlaceholder API
+// - Returns formatted HTML list with user names and emails using template literals and .map()
+// - Server runs on localhost:3000
+// Key learning: async/await for API calls, dynamic HTML generation on backend

@@ -38,3 +38,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
+
+<!-- CODE SUMMARY FOR TEACHER:
+This HTML uses HTMX to make dynamic requests without custom JavaScript
+- htmx-config meta tag: disables selfRequestsOnly to allow external API calls (HTMX 2.0 requirement)
+- Button with HTMX attributes:
+  * hx-get='/users': sends GET request to server endpoint
+  * hx-target='#users': injects response into div with id="users"
+  * hx-vals='{"limit":7}': sends limit parameter to server
+  * hx-indicator='#loading': shows Bootstrap spinner during request
+  * hx-confirm: displays confirmation dialog before fetching
+- Result: Dynamic content updates without page reload or custom JavaScript
+Key learning: HTMX declarative attributes replace traditional JavaScript for AJAX requests
+-->
