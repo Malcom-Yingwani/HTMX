@@ -1,0 +1,10 @@
+*.pyc
+__pycache__
+db.sqlite3
+notes*.txt
+node_modules
+
+# --- Environment & Secrets ---
+*.env
+.env.*
+!example.env 
