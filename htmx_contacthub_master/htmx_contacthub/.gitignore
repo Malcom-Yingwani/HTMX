@@ -2,6 +2,7 @@
 __pycache__
 db.sqlite3
 notes*.txt
+node_modules
 
 # --- Environment & Secrets ---
 *.env
