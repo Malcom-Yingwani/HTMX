@@ -46,3 +46,9 @@
   </body>
 </html>
 
+<!-- Chat GPT Summary
+ 
+This form contains two input fields: one for an email address and one for a password. 
+The email field uses HTMX, so whenever the user types an email, HTMX sends a POST request to the /email endpoint for validation. 
+The entire <div> containing the email field has hx-target="this" and hx-swap="outerHTML", which means the server’s response will replace that whole section—allowing the page to dynamically update with success or error messages (like a green or red alert) without reloading. 
+The password field and submit button behave normally, and only the email field uses HTMX for live validation.-->

@@ -1,0 +1,9 @@
+*.pyc
+__pycache__
+db.sqlite3
+notes*.txt
+
+# --- Environment & Secrets ---
+*.env
+.env.*
+!example.env 

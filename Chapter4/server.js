@@ -49,3 +49,12 @@ app.listen(3000, () => {
 });
 
 
+// Chat GPT SUmmary
+
+// This code handles a POST request to the /search route and performs a simple live search.
+//  It starts by reading the search term sent from the client and converts it to lowercase so the comparison is case-insensitive. 
+// If the search term is empty, it immediately returns an empty <tr></tr> row to clear any results. 
+// The server then fetches a list of users from an external API (jsonplaceholder.typicode.com) and converts it to JSON. 
+// It filters the users by checking whether the search term appears in either the user’s name or email. 
+// For every matching user, it builds an HTML table row (<tr>...</tr>). 
+// All the matching rows are joined together into one HTML string, which is finally sent back to the client—typically to be inserted into a table via HTMX.

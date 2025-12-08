@@ -22,9 +22,19 @@ app.post("/calculate", (req, res) => {
   const bmi = weight / (height * height);
   console.log(bmi);
 
-  res.send(`
- <p>Height of ${height} & Weight of ${weight} gives you BMI of ${bmi.toFixed(2)}</p>
- `);
+  let result = `<p>Height of ${height} & Weight of ${weight} gives you BMI of ${bmi.toFixed(2)}</p>`;
+
+  if (bmi < 18.5) {
+    result += `<p>Your BMI falls within the underweight range.</p>`;
+  } else if (bmi <= 24.9) {
+    result += `<p>Your BMI falls within the Healthy Weight range</p>`;
+  } else if (bmi <= 29.9) {
+    result += `<p>Your BMI falls within the overweight range</p>`;
+  } else if (bmi >= 30) {
+    result += `<p>Your BMI falls within the obese range.</p>`;
+  }
+
+  res.send(result);
 });
 
 

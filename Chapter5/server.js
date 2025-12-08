@@ -58,3 +58,11 @@ app.post("/email", (req, res) => {
 app.listen(3000, () => {
   console.log("Server listening on port 3000");
 });
+
+
+// Chat GPT summary
+
+// This code handles the email validation request sent by HTMX when a user types an email into the input field. 
+// When the /email route receives a POST request, it reads the submitted email and checks it against a regular expression to determine whether the format is valid. 
+// Depending on the result, the server returns new HTML containing the email input field along with either a green success alert or a red error alert. 
+// Because the returned HTML includes hx-target="this" and hx-swap="outerHTML", HTMX replaces the entire input section on the page with the updated version, allowing the user to instantly see whether their email is valid without refreshing the page.

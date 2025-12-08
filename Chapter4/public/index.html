@@ -54,15 +54,10 @@
   </body>
 </html>
 
-<!--
-  SUMMARY OF BITCOIN PRICE TRACKER (HTML + HTMX)
+<!--Chat GPT summary
 
-  - Creates a simple Bitcoin price tracker UI inside a container.
-  - Includes a main heading: "Bitcoin Price Tracker".
-  - Displays the current Bitcoin price in an <h2> element.
-  - Uses HTMX to fetch data from the backend route "/get-price":
-      • hx-get="/get-price" → sends GET request to fetch the latest price.
-      • hx-trigger="every 5s" → automatically updates the price every 5 seconds.
-  - Initial text "Loading..." is shown while waiting for the first response.
-  - Allows dynamic, real-time updates without reloading the page.
--->
+This page creates a live user-search interface using HTMX. 
+The search input field sends a POST request to /search every time the user types (hx-trigger="input changed delay:500ms") or performs a built-in search action. 
+The server’s response is inserted into the <tbody id="search-results"> area, replacing its contents. The table displays user results with two columns: Name and Email.
+   Initially, the table contains one placeholder row (“Mark/ Otto”), but as soon as the user types, 
+   HTMX sends the search term to the server, receives matching rows, and updates the results instantly without reloading the page.-->
